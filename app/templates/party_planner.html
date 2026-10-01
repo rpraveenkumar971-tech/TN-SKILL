@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-page">
+
+    <div class="planner-form-card">
+
+        <span class="pill">
+            Party Planning
+        </span>
+
+        <h1>
+            Party Budget Planner
+        </h1>
+
+        <p>
+            Create a party budget based
+            on your guest count and
+            requirements.
+        </p>
+
+
+        <form
+            id="partyForm"
+            class="form-grid"
+        >
+
+            <label>
+
+                Total Budget (₹)
+
+                <input
+                    type="number"
+                    name="total_budget"
+                    min="1"
+                    step="0.01"
+                    placeholder="50000"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Party Type
+
+                <input
+                    type="text"
+                    name="party_type"
+                    placeholder="Birthday"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Number of Guests
+
+                <input
+                    type="number"
+                    name="num_guests"
+                    min="1"
+                    value="20"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Venue Type
+
+                <input
+                    type="text"
+                    name="venue_type"
+                    placeholder="Banquet Hall"
+                >
+
+            </label>
+
+
+            <div class="checkbox-group">
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="needs_catering"
+                        checked
+                    >
+
+                    Catering
+
+                </label>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="needs_decoration"
+                        checked
+                    >
+
+                    Decoration
+
+                </label>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="needs_entertainment"
+                    >
+
+                    Entertainment
+
+                </label>
+
+            </div>
+
+
+            <label class="full-width">
+
+                Additional Requirements
+
+                <textarea
+                    name="additional_requirements"
+                    placeholder="Example: Vegetarian food, DJ, birthday theme..."
+                ></textarea>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn full-width"
+            >
+                Generate AI Recommendations
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="result-card"
+    >
+
+        <div class="empty-result">
+
+            <div>
+                🎉
+            </div>
+
+            <h2>
+                Your party plan
+            </h2>
+
+            <p>
+                Your budget allocation will
+                appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

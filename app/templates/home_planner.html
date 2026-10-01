@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Interior Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-page">
+
+    <div class="planner-form-card">
+
+        <span class="pill">
+            Home Interior
+        </span>
+
+        <h1>
+            Home Interior Budget Planner
+        </h1>
+
+        <p>
+            Enter your requirements and
+            let PocketSmart AI create a
+            practical budget plan.
+        </p>
+
+
+        <form
+            id="homeForm"
+            class="form-grid"
+        >
+
+            <label>
+
+                Total Budget (₹)
+
+                <input
+                    type="number"
+                    name="total_budget"
+                    min="1"
+                    step="0.01"
+                    placeholder="50000"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Number of Lights
+
+                <input
+                    type="number"
+                    name="num_lights"
+                    min="0"
+                    value="1"
+                >
+
+            </label>
+
+
+            <label>
+
+                Number of Fans
+
+                <input
+                    type="number"
+                    name="num_fans"
+                    min="0"
+                    value="1"
+                >
+
+            </label>
+
+
+            <label>
+
+                Furniture Pieces
+
+                <input
+                    type="number"
+                    name="num_furniture"
+                    min="0"
+                    value="1"
+                >
+
+            </label>
+
+
+            <label>
+
+                Dining Tables
+
+                <input
+                    type="number"
+                    name="num_dining_tables"
+                    min="0"
+                    value="0"
+                >
+
+            </label>
+
+
+            <div class="checkbox-group">
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="has_living_room"
+                    >
+
+                    Living Room
+
+                </label>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="has_kitchen"
+                    >
+
+                    Kitchen
+
+                </label>
+
+
+                <label class="checkbox-label">
+
+                    <input
+                        type="checkbox"
+                        name="has_bedroom"
+                    >
+
+                    Bedroom
+
+                </label>
+
+            </div>
+
+
+            <label class="full-width">
+
+                Additional Requirements
+
+                <textarea
+                    name="additional_requirements"
+                    placeholder="Example: Need modern furniture and warm lighting."
+                ></textarea>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn full-width"
+            >
+                Generate AI Recommendations
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="result-card"
+    >
+
+        <div class="empty-result">
+
+            <div>
+                🤖
+            </div>
+
+            <h2>
+                Your recommendation
+                will appear here
+            </h2>
+
+            <p>
+                Fill the form and click
+                Generate Recommendations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner-page">
+
+    <div class="planner-form-card">
+
+        <span class="pill">
+            Jewelry Planning
+        </span>
+
+        <h1>
+            Jewelry Budget Planner
+        </h1>
+
+        <p>
+            Get occasion-based jewelry
+            recommendations within your
+            budget.
+        </p>
+
+
+        <form
+            id="jewelryForm"
+            class="form-grid"
+            enctype="multipart/form-data"
+        >
+
+            <label>
+
+                Total Budget (₹)
+
+                <input
+                    type="number"
+                    name="total_budget"
+                    min="1"
+                    step="0.01"
+                    placeholder="25000"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Occasion
+
+                <input
+                    type="text"
+                    name="occasion"
+                    placeholder="Wedding / Anniversary"
+                    required
+                >
+
+            </label>
+
+
+            <label class="full-width">
+
+                Jewelry Preferences
+
+                <textarea
+                    name="preferences"
+                    placeholder="Example: Traditional gold style, minimal design..."
+                ></textarea>
+
+            </label>
+
+
+            <label class="full-width">
+
+                Outfit Image
+                <span class="small-text">
+                    Optional - JPG, PNG or WEBP
+                </span>
+
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/jpeg,image/png,image/webp"
+                >
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn full-width"
+            >
+                Generate AI Recommendations
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div
+        id="result"
+        class="result-card"
+    >
+
+        <div class="empty-result">
+
+            <div>
+                💎
+            </div>
+
+            <h2>
+                Your jewelry plan
+            </h2>
+
+            <p>
+                Your recommendations will
+                appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

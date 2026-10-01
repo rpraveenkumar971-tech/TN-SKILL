@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard - PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="dashboard-header">
+
+    <span class="pill">
+        Dashboard
+    </span>
+
+    <h1>
+        Welcome,
+        {{ user["full_name"] or user["username"] }}!
+    </h1>
+
+    <p>
+        Choose a planner to create
+        your personalized budget plan.
+    </p>
+
+</section>
+
+
+<section class="cards dashboard-cards">
+
+    <a
+        href="/home-planner"
+        class="feature-card dashboard-card"
+    >
+
+        <div class="feature-icon">
+            🏠
+        </div>
+
+        <h2>
+            Home Interior
+        </h2>
+
+        <p>
+            Plan furniture, lighting,
+            fans and room requirements.
+        </p>
+
+        <span>
+            Start Planning →
+        </span>
+
+    </a>
+
+
+    <a
+        href="/party-planner"
+        class="feature-card dashboard-card"
+    >
+
+        <div class="feature-icon">
+            🎉
+        </div>
+
+        <h2>
+            Party Planner
+        </h2>
+
+        <p>
+            Plan venue, catering,
+            decoration and entertainment.
+        </p>
+
+        <span>
+            Start Planning →
+        </span>
+
+    </a>
+
+
+    <a
+        href="/jewelry-planner"
+        class="feature-card dashboard-card"
+    >
+
+        <div class="feature-icon">
+            💎
+        </div>
+
+        <h2>
+            Jewelry Planner
+        </h2>
+
+        <p>
+            Get occasion-based jewelry
+            recommendations.
+        </p>
+
+        <span>
+            Start Planning →
+        </span>
+
+    </a>
+
+</section>
+
+{% endblock %}
